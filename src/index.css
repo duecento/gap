@@ -1,0 +1,32 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Inter', system-ui, 'Segoe UI', Roboto, sans-serif;
+  --font-heading: 'Poppins', system-ui, 'Segoe UI', Roboto, sans-serif;
+
+  --color-gap-red: #e31c1c;
+  --color-gap-red-dark: #b91414;
+  --color-gap-black: #111111;
+  --color-gap-cream: #fbf7f2;
+  --color-gap-stone: #f2ede6;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background: var(--color-gap-cream);
+  color: var(--color-gap-black);
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+}
+
+::selection {
+  background: var(--color-gap-red);
+  color: white;
+}
