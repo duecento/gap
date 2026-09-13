@@ -1,5 +1,8 @@
 import { motion } from 'motion/react';
 import { services } from '../data/content';
+import { FoodBasketIcon, HandsHeartIcon, ShopBagIcon } from './Icons';
+
+const icons = [ShopBagIcon, FoodBasketIcon, HandsHeartIcon];
 
 export function Services() {
   return (
@@ -13,24 +16,27 @@ export function Services() {
         </div>
 
         <div className="grid gap-6 md:grid-cols-3">
-          {services.map((service, i) => (
-            <motion.div
-              key={service.title}
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-60px' }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="rounded-2xl border border-white/10 bg-white/5 p-8 transition-colors hover:border-gap-red/50"
-            >
-              <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-full bg-gap-red text-lg font-bold">
-                {String(i + 1).padStart(2, '0')}
-              </div>
-              <h3 className="mb-3 text-xl font-semibold">{service.title}</h3>
-              <p className="text-sm leading-relaxed text-white/70">
-                {service.description}
-              </p>
-            </motion.div>
-          ))}
+          {services.map((service, i) => {
+            const Icon = icons[i];
+            return (
+              <motion.div
+                key={service.title}
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-60px' }}
+                transition={{ duration: 0.5, delay: i * 0.1 }}
+                className="rounded-2xl border border-white/10 bg-white/5 p-8 transition-colors hover:border-gap-red/50"
+              >
+                <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-full bg-gap-red text-white">
+                  <Icon />
+                </div>
+                <h3 className="mb-3 text-xl font-semibold">{service.title}</h3>
+                <p className="text-sm leading-relaxed text-white/70">
+                  {service.description}
+                </p>
+              </motion.div>
+            );
+          })}
         </div>
       </div>
     </section>
