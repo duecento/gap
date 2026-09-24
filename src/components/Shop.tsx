@@ -5,7 +5,7 @@ import { shopPhotos } from '../data/images';
 export function Shop() {
   return (
     <section id="shop" className="mx-auto max-w-6xl px-5 py-24">
-      <div className="grid items-center gap-12 md:grid-cols-2">
+      <div className="grid items-start gap-12 md:grid-cols-2">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

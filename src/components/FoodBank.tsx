@@ -5,7 +5,7 @@ import { foodbankPhoto } from '../data/images';
 export function FoodBank() {
   return (
     <section id="foodbank" className="bg-gap-black py-24 text-white">
-      <div className="mx-auto grid max-w-6xl items-center gap-12 px-5 md:grid-cols-2">
+      <div className="mx-auto grid max-w-6xl items-start gap-12 px-5 md:grid-cols-2">
         <motion.img
           src={foodbankPhoto}
           alt="Signpost outside Eden House advertising the Moira Foodbank"

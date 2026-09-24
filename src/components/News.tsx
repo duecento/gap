@@ -1,19 +1,6 @@
 import { motion } from 'motion/react';
 import { facebook } from '../data/content';
 
-const embedSrc =
-  'https://www.facebook.com/plugins/page.php?' +
-  new URLSearchParams({
-    href: facebook.url,
-    tabs: 'timeline',
-    width: '500',
-    height: '640',
-    small_header: 'true',
-    adapt_container_width: 'true',
-    hide_cover: 'true',
-    show_facepile: 'false',
-  }).toString();
-
 export function News() {
   return (
     <section id="news" className="mx-auto max-w-6xl px-5 py-24">
@@ -44,24 +31,30 @@ export function News() {
           </a>
         </motion.div>
 
-        <motion.div
+        <motion.a
+          href={facebook.url}
+          target="_blank"
+          rel="noopener noreferrer"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-80px' }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="mx-auto w-full max-w-[500px] overflow-hidden rounded-2xl bg-white shadow-lg"
+          className="group mx-auto flex w-full max-w-[500px] flex-col items-center gap-5 rounded-2xl bg-[#1877F2] px-8 py-14 text-center text-white shadow-lg transition-transform hover:scale-[1.02]"
         >
-          <iframe
-            title="GAP Ministries Facebook posts"
-            src={embedSrc}
-            width="500"
-            height="640"
-            className="block h-[640px] w-full border-0"
-            loading="lazy"
-            allow="encrypted-media"
-            referrerPolicy="origin-when-cross-origin"
-          />
-        </motion.div>
+          <svg viewBox="0 0 24 24" className="h-16 w-16" fill="currentColor" aria-hidden="true">
+            <path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5 3.66 9.16 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.5 1.49-3.89 3.78-3.89 1.1 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.44 2.91h-2.34V22c4.78-.78 8.44-4.94 8.44-9.94Z" />
+          </svg>
+          <div>
+            <p className="text-xl font-bold">Join us on Facebook</p>
+            <p className="mt-2 text-white/85">
+              @gapmoira — follow along for the latest from the shop, the
+              foodbank, and Eden House.
+            </p>
+          </div>
+          <span className="rounded-full bg-white px-6 py-2.5 text-sm font-semibold text-[#1877F2] transition-colors group-hover:bg-white/90">
+            Follow Our Page
+          </span>
+        </motion.a>
       </div>
     </section>
   );
