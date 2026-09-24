@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { Photo } from './Placeholder';
+import { heroImages } from '../data/images';
 
 export function About() {
   return (
@@ -50,22 +50,19 @@ export function About() {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="grid grid-cols-2 gap-4"
         >
-          <Photo
-            src="/images/facade-2.jpg"
+          <img
+            src={heroImages[0]}
             alt="Eden House exterior with GAP Charity Shop and Bridging the Gap signage"
-            label="Eden House"
             className="col-span-2 h-64 w-full rounded-2xl object-cover shadow-lg"
           />
-          <Photo
-            src="/images/facade-3.jpg"
-            alt="GAP community signpost outside Eden House"
-            label="Community Signpost"
+          <img
+            src={heroImages[1]}
+            alt="Front entrance of Eden House, home of GAP Ministries"
             className="h-40 w-full rounded-2xl object-cover shadow-lg"
           />
-          <Photo
-            src="/images/facade-4.jpg"
-            alt="Front entrance of Eden House, home of GAP Ministries"
-            label="Entrance"
+          <img
+            src={heroImages[2]}
+            alt="GAP community signpost outside Eden House"
             className="h-40 w-full rounded-2xl object-cover shadow-lg"
           />
         </motion.div>

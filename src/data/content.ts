@@ -43,16 +43,6 @@ export const services = [
   },
 ];
 
-export const galleryImages = [
-  { src: '/images/shop-1.jpg', alt: 'Shelves of homeware and glassware in the GAP charity shop' },
-  { src: '/images/shop-2.jpg', alt: 'A denim jacket on display in the charity shop' },
-  { src: '/images/shop-3.jpg', alt: 'Rails of clothing in the GAP charity shop' },
-  { src: '/images/shop-4.jpg', alt: 'Shoe display shelving in the charity shop' },
-  { src: '/images/shop-5.jpg', alt: 'Glassware and gift display in the charity shop' },
-  { src: '/images/shop-6.jpg', alt: 'Clothing rails and accessories in the charity shop' },
-  { src: '/images/shop-7.jpg', alt: 'Homeware shelves by the window in the charity shop' },
-];
-
 export const contact = {
   phone: '028 9210 6116',
   email: 'gapccmoira@gmail.com',
