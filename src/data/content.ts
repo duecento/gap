@@ -1,7 +1,7 @@
 export const nav = [
   { label: 'About', href: '#about' },
   { label: 'What We Do', href: '#services' },
-  { label: 'Gallery', href: '#gallery' },
+  { label: 'News', href: '#news' },
   { label: 'Opening Hours', href: '#hours' },
   { label: 'Contact', href: '#contact' },
 ];
@@ -47,4 +47,8 @@ export const contact = {
   phone: '028 9210 6116',
   email: 'gapccmoira@gmail.com',
   address: '38 Main Street, Moira, United Kingdom, BT67 0LE',
+};
+
+export const facebook = {
+  url: 'https://www.facebook.com/gapmoira',
 };
