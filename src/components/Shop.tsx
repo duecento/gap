@@ -39,25 +39,25 @@ export function Shop() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-80px' }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="grid grid-cols-2 grid-rows-2 gap-4"
+          className="grid h-80 grid-cols-2 grid-rows-2 gap-3 sm:h-96 md:h-[22rem]"
         >
           <img
             src={shopPhotos.shoes}
             alt="Shelves of shoes in the GAP charity shop"
             loading="lazy"
-            className="row-span-2 h-full min-h-[22rem] w-full rounded-2xl object-cover shadow-lg"
+            className="row-span-2 h-full min-h-0 w-full rounded-2xl object-cover shadow-lg"
           />
           <img
             src={shopPhotos.homeware}
             alt="Table of homeware and linens in the GAP charity shop"
             loading="lazy"
-            className="h-48 w-full rounded-2xl object-cover shadow-lg sm:h-full"
+            className="h-full min-h-0 w-full rounded-2xl object-cover shadow-lg"
           />
           <img
             src={shopPhotos.art}
             alt="Framed paintings for sale in the GAP charity shop"
             loading="lazy"
-            className="h-48 w-full rounded-2xl object-cover shadow-lg sm:h-full"
+            className="h-full min-h-0 w-full rounded-2xl object-cover shadow-lg"
           />
         </motion.div>
       </div>
