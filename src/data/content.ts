@@ -2,6 +2,7 @@ export const nav = [
   { label: 'About', href: '#about' },
   { label: 'Charity Shop', href: '#shop' },
   { label: 'Food Bank', href: '#foodbank' },
+  { label: 'Our Team', href: '#team' },
   { label: 'News', href: '#news' },
   { label: 'Opening Hours', href: '#hours' },
   { label: 'Contact', href: '#contact' },

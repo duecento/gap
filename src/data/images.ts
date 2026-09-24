@@ -36,3 +36,11 @@ export const shopPhotos = {
 };
 
 export const foodbankPhoto = pick(heroImages, 'gap_house_sign');
+
+export const teamPhoto = Object.values(
+  import.meta.glob<string>('../assets/images/gap_team.jpg', {
+    eager: true,
+    import: 'default',
+    query: '?url',
+  }),
+)[0];

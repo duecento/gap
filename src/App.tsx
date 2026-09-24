@@ -8,6 +8,7 @@ import { Hero } from './components/Hero';
 import { Hours } from './components/Hours';
 import { News } from './components/News';
 import { Shop } from './components/Shop';
+import { Team } from './components/Team';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <About />
         <Shop />
         <FoodBank />
+        <Team />
         <News />
         <Hours />
         <Contact />
