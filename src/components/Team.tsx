@@ -35,13 +35,13 @@ export function Team() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-80px' }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="mx-auto w-full max-w-md"
+          className="mx-auto w-full max-w-xl"
         >
           <img
             src={teamPhoto}
             alt="The GAP Ministries team and volunteers sharing a meal together"
             loading="lazy"
-            className="aspect-[4/5] w-full rounded-2xl object-cover object-[center_30%] shadow-xl"
+            className="aspect-[3/2] w-full rounded-2xl object-cover object-center shadow-xl"
           />
         </motion.div>
       </div>
