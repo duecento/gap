@@ -26,3 +26,13 @@ export const carouselImages = sortedUrls(
     query: '?url',
   }),
 );
+
+const pick = (urls: string[], id: string) => urls.find((u) => u.includes(id)) ?? '';
+
+export const shopPhotos = {
+  art: pick(carouselImages, '638669744'),
+  shoes: pick(carouselImages, '656830631'),
+  homeware: pick(carouselImages, '774267639'),
+};
+
+export const foodbankPhoto = pick(heroImages, 'gap_house_sign');

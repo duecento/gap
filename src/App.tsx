@@ -1,12 +1,13 @@
 import { About } from './components/About';
 import { Carousel } from './components/Carousel';
 import { Contact } from './components/Contact';
+import { FoodBank } from './components/FoodBank';
 import { Footer } from './components/Footer';
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
 import { Hours } from './components/Hours';
 import { News } from './components/News';
-import { Services } from './components/Services';
+import { Shop } from './components/Shop';
 
 function App() {
   return (
@@ -16,7 +17,8 @@ function App() {
         <Hero />
         <Carousel />
         <About />
-        <Services />
+        <Shop />
+        <FoodBank />
         <News />
         <Hours />
         <Contact />

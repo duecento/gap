@@ -1,6 +1,7 @@
 export const nav = [
   { label: 'About', href: '#about' },
-  { label: 'What We Do', href: '#services' },
+  { label: 'Charity Shop', href: '#shop' },
+  { label: 'Food Bank', href: '#foodbank' },
   { label: 'News', href: '#news' },
   { label: 'Opening Hours', href: '#hours' },
   { label: 'Contact', href: '#contact' },
@@ -25,23 +26,21 @@ export const openingHours = [
   },
 ];
 
-export const services = [
-  {
-    title: 'GAP Charity Shop',
-    description:
-      'Browse quality clothing, homeware, books and bric-a-brac — all proceeds go straight back into community support. Donations of clothes, household items and small furniture always welcome.',
-  },
-  {
-    title: 'Moira Foodbank',
-    description:
-      'A confidential, judgment-free service for anyone who needs food support. If you need help, just speak to us — no referral, no fuss.',
-  },
-  {
-    title: 'Bridging the Gap',
-    description:
-      'Meeting needs across poverty relief, health & wellbeing, life skills and cross-community connection — a listening ear, counselling, and prayer for anyone who wants it.',
-  },
-];
+export const shop = {
+  hours: 'Wed, Thurs & Fri, 10:00am – 2:00pm',
+  intro:
+    'Browse quality clothing, shoes, homeware, glassware, books, DVDs and bric-a-brac at friendly prices. Every purchase goes straight back into supporting our community.',
+  donationsHeading: 'Donations always welcome',
+  donations: ['Clothes', 'Household items', 'Bric-a-brac', 'Toys', 'Small furniture items'],
+};
+
+export const foodbank = {
+  hours: 'Tues, Wed, Thurs & Fri, 10:00am – 11:30am',
+  intro:
+    'If you need food items, speak to us confidentially — do not hesitate. Please call in or ring the helpline.',
+  helpline: '077 6103 2023',
+  note: 'Entrance at the rear of Eden House.',
+};
 
 export const contact = {
   phone: '028 9210 6116',
