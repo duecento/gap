@@ -36,11 +36,11 @@ export function Hero() {
             className="absolute inset-y-0 -left-[6%] h-full w-[112%] max-w-none object-cover"
           />
         </AnimatePresence>
-        <div className="absolute inset-0 bg-gradient-to-t from-gap-black via-gap-black/50 to-gap-black/20" />
-        <div className="absolute inset-0 bg-gradient-to-r from-gap-black/70 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-gap-black/60 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-gap-black/30 via-transparent to-transparent" />
       </div>
 
-      <div className="relative mx-auto w-full max-w-6xl px-5 py-24 text-white">
+      <div className="relative mx-auto w-full max-w-6xl px-5 py-24 text-white [text-shadow:0_2px_4px_rgb(0_0_0/0.6),0_0_24px_rgb(0_0_0/0.55)]">
         <motion.p
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
