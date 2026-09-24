@@ -1,21 +1,46 @@
-import { motion } from 'motion/react';
-import { Photo } from './Placeholder';
+import { AnimatePresence, motion } from 'motion/react';
+import { useEffect, useState } from 'react';
+import { heroImages } from '../data/images';
+
+const SLIDE_MS = 7000;
+const FADE_S = 2;
+const DRIFT_S = SLIDE_MS / 1000 + FADE_S + 1;
 
 export function Hero() {
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    if (heroImages.length < 2) return;
+    const id = window.setInterval(
+      () => setIndex((i) => (i + 1) % heroImages.length),
+      SLIDE_MS,
+    );
+    return () => window.clearInterval(id);
+  }, []);
+
   return (
     <section id="top" className="relative flex min-h-[92svh] items-center overflow-hidden bg-gap-black pt-20">
-      <div className="absolute inset-0">
-        <Photo
-          src="/images/facade-1.jpg"
-          alt="Eden House, home of GAP Ministries in Moira"
-          label="Eden House — GAP Ministries"
-          className="h-full w-full object-cover opacity-60"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-gap-black via-gap-black/60 to-gap-black/20" />
+      <div className="absolute inset-0" aria-hidden="true">
+        <AnimatePresence initial={false}>
+          <motion.img
+            key={index}
+            src={heroImages[index]}
+            alt=""
+            initial={{ opacity: 0, x: '-3%' }}
+            animate={{ opacity: 1, x: '3%' }}
+            exit={{ opacity: 0 }}
+            transition={{
+              opacity: { duration: FADE_S, ease: 'easeInOut' },
+              x: { duration: DRIFT_S, ease: 'linear' },
+            }}
+            className="absolute inset-y-0 -left-[6%] h-full w-[112%] max-w-none object-cover"
+          />
+        </AnimatePresence>
+        <div className="absolute inset-0 bg-gradient-to-t from-gap-black via-gap-black/50 to-gap-black/20" />
         <div className="absolute inset-0 bg-gradient-to-r from-gap-black/70 via-transparent to-transparent" />
       </div>
 
-      <div className="relative mx-auto max-w-6xl px-5 py-24 text-white">
+      <div className="relative mx-auto w-full max-w-6xl px-5 py-24 text-white">
         <motion.p
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
@@ -61,6 +86,24 @@ export function Hero() {
           </a>
         </motion.div>
       </div>
+
+      {heroImages.length > 1 && (
+        <div className="absolute inset-x-0 bottom-6 flex justify-center gap-3" role="tablist" aria-label="Hero slides">
+          {heroImages.map((_, i) => (
+            <button
+              key={i}
+              type="button"
+              role="tab"
+              aria-selected={i === index}
+              aria-label={`Show slide ${i + 1}`}
+              onClick={() => setIndex(i)}
+              className={`h-2.5 rounded-full transition-all duration-500 ${
+                i === index ? 'w-8 bg-gap-red' : 'w-2.5 bg-white/50 hover:bg-white/80'
+              }`}
+            />
+          ))}
+        </div>
+      )}
     </section>
   );
 }

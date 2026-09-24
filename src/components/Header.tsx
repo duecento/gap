@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { nav } from '../data/content';
-import { Photo } from './Placeholder';
+import { logo } from '../data/images';
 
 export function Header() {
   const [open, setOpen] = useState(false);
@@ -21,10 +21,9 @@ export function Header() {
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-3">
         <a href="#top" className="flex items-center gap-3">
-          <Photo
-            src="/images/logo.png"
+          <img
+            src={logo}
             alt="GAP Ministries logo"
-            label="GAP"
             className="h-10 w-10 rounded-md object-contain"
           />
           <span className="font-heading text-lg font-bold tracking-tight text-gap-black">

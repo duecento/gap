@@ -1,4 +1,5 @@
 import { About } from './components/About';
+import { Carousel } from './components/Carousel';
 import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
 import { Gallery } from './components/Gallery';
@@ -13,6 +14,7 @@ function App() {
       <Header />
       <main>
         <Hero />
+        <Carousel />
         <About />
         <Services />
         <Gallery />

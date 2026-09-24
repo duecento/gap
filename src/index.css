@@ -26,6 +26,21 @@ h1, h2, h3, h4 {
   font-family: var(--font-heading);
 }
 
+@keyframes carousel-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(calc(-50% - 0.5rem)); }
+}
+
+.carousel-track {
+  animation: carousel-scroll linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .carousel-track {
+    animation: none;
+  }
+}
+
 ::selection {
   background: var(--color-gap-red);
   color: white;
