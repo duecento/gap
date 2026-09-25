@@ -26,8 +26,8 @@ export function Hero() {
             key={index}
             src={heroImages[index]}
             alt=""
-            initial={{ opacity: 0, x: '-3%' }}
-            animate={{ opacity: 1, x: '3%' }}
+            initial={{ opacity: 0, x: '3%' }}
+            animate={{ opacity: 1, x: '-3%' }}
             exit={{ opacity: 0 }}
             transition={{
               opacity: { duration: FADE_S, ease: 'easeInOut' },
